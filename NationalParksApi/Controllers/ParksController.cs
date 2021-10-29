@@ -11,7 +11,7 @@ namespace NationalParksApi.Controllers
 
   
   {
-        [Route("api/nationalparks/[controller]")]
+        [Route("api/[controller]")]
       [ApiController]
       public class ParksController : ControllerBase
       {
@@ -21,64 +21,48 @@ namespace NationalParksApi.Controllers
           {
               _db = db;
           }
-         
-  
-          // GET: api/Parks
+
+// Create : api/Parks
+
+          [HttpPost]
+          public async Task<ActionResult<Park>> Post([FromBody]Park park)
+          {
+              _db.Parks.Add(park);
+              await _db.SaveChangesAsync();
+              return CreatedAtAction(nameof(GetParks), new { id = park.ParkId }, park);
+          }
+// Read : api/Parks/
           [HttpGet]
           public async Task<ActionResult<IEnumerable<Park>>> GetParks()
           {
               return await _db.Parks.ToListAsync();
           }
-  
-          // GET: api/Parks/5
-          [HttpGet("{id}")]
-          public async Task<ActionResult<Park>> GetPark(int id)
+
+// Update : api/Parks/
+
+          [HttpPut]
+          public async Task<ActionResult<Park>> Put([FromBody]Park park)
+          {
+              _db.Entry(park).State = EntityState.Modified;
+              await _db.SaveChangesAsync();
+              return CreatedAtAction(nameof(GetParks), new { id = park.ParkId }, park);
+          }
+// Delete : api/Parks/
+
+          [HttpDelete("{id}")]
+          public async Task<IActionResult> Delete(int id)
           {
               var park = await _db.Parks.FindAsync(id);
-  
               if (park == null)
               {
                   return NotFound();
               }
-  
-              return park;
-          }
-  
-          // PUT: api/Parks/5
-          // To protect from overposting attacks, enable the specific properties you want to bind to, for
-          // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-          [HttpPut("{id}")]
-          public async Task<IActionResult> Put(int id, Park park)
-          {
-              if (id != park.ParkId)
-              {
-                  return BadRequest();
-              }
-  
-              _db.Entry(park).State = EntityState.Modified;
-  
-              try
-              {
-                  await _db.SaveChangesAsync();
-              }
-              catch (DbUpdateConcurrencyException)
-              {
-                  if (ParkExists(id))
-                  {
-                      return NotFound();
-                  }
-                  else
-                  {
-                      throw;
-                  }
-              }
-        
+              _db.Parks.Remove(park);
+              await _db.SaveChangesAsync();
               return NoContent();
           }
-      private bool ParkExists(int id)
-    {
-      return _db.Parks.Any(p => p.ParkId == id);
-    }
+
+  
   }
 }
 
