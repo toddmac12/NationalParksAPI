@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "B8b0zdDFjNPF1p/kR5RMSpQIvoul4TZx9p5TAmb1Mwtp4EhDoUbPXHq9ErgSihNbRWsnaZOSr2y0ywPBkRmt0Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\toddm\\Desktop\\Epicodus\\Week 12\\NationalParksApi\\NationalParksApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\toddm\\.nuget\\packages\\restsharp\\106.6.10\\restsharp.106.6.10.nupkg.sha512"
+  ],
+  "logs": []
+}
