@@ -6,14 +6,12 @@ Web API for National Parks in the United States.
 
 ## Technologies Used
 
-- C#
-- .NET 5
-- MSBuild
-- MSTest
-- Entity
-- Swagger
-- MySQL
-- git
+|C# |  Swagger|
+|---|---|
+| .NET 5 | MySQL|
+|   MSBuild| git|
+|   HTML|   Entity|
+|   CSS|   JavaScript|
 
 ### Setup and Use
 
@@ -80,7 +78,7 @@ To explore the NationalParks API with Swagger, launch the project using `dotnet 
 
 ### Endpoints
 
-**GET requests**
+#### GET requests
 
 - `http://localhost:5000/api/nationalparks/parks`
   - GETs all National Parks in the database. The database is seeded with information from Alagnak Wild River national park.
@@ -101,17 +99,17 @@ To explore the NationalParks API with Swagger, launch the project using `dotnet 
 
 - GETs the National Park with the Id as specified in the request
 
-**POST**
+#### POST
 
 - `http://localhost:5000/api/nationalparks/parks`
   - POSTs a new National Park to the API
 
-**DELETE**
+#### DELETE
 
 - `http://localhost:5000/api/nationalparks/parks/{ID}`
   - DELETEs the National Park with the Id as specified in the request
 
-**PUT**
+#### PUT
 
 - `http://localhost:5000/api/nationalparks/parks/{ID}`
   - PUTs new data into the National Park entry with the Id as specified in the request
