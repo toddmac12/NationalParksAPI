@@ -21,11 +21,11 @@ Web API for National Parks in the United States.
 
 1. Navigate to the [National Parks API](https://github.com/toddmac12/NationalParksAPI.git).
 2. Click 'Clone or download' to reveal the HTTPS url ending with .git and the 'Download ZIP' option.
-3. Open up your system Terminal or GitBash, navigate to your desktop with the command: `cd Desktop`, or whichever location suits you best.
+3. Open up your system Terminal or GitBash, navigate to your desktop with the command: `cd Desktop`.
 4. Clone the repository to your desktop: `$ git clone https://github.com/toddmac12/NationalParksAPI.git`
 5. Run the command `cd NationalParksAPI` to enter into the project directory.
 6. View or Edit:
-   - Code Editor - Run the command `atom .` or `code .` to open the project in Atom or VisualStudio Code respectively for review and editing.
+   - Code Editor - Run the command `code .` to open the project in VisualStudio Code review and editing.
    - Text Editor - Open by double clicking on any of the files to open in a text editor.
 
 #### Download
@@ -74,7 +74,7 @@ Explore the API endpoints in Postman or a browser. You will not be able to utili
 
 ### Using Swagger Documentation
 
-To explore the NationalParks API with NSwag, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/swagger`
+To explore the NationalParks API with Swagger, launch the project using `dotnet run` with the Terminal or Powershell, and input the following URL into your browser: `http://localhost:5000/swagger`
 
 ..........................................................................................
 
