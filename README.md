@@ -120,4 +120,4 @@ To explore the NationalParks API with Swagger, launch the project using `dotnet 
 
 | Author        | GitHub |                              Email                               |
 | ------------- | :----: | :--------------------------------------------------------------: |
-| Anthony McRae |        | [anthonytoddmcrae@gmail.copm](mailto:anthonytoddmcrae@gmail.com) |
+| Anthony McRae |        | [anthonytoddmcrae@gmail.com](mailto:anthonytoddmcrae@gmail.com) |
